@@ -1,0 +1,169 @@
+/* =========================
+   GLOBAL RESET & BASE STYLES
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   CONTAINER & APP WRAPPER
+========================= */
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e0854);
+    padding: 10px;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    margin: 102px auto 136px;
+    padding: 80px 38px;
+    background: #fff;
+    border-radius: 30px;
+}
+
+/* =========================
+   HEADER
+========================= */
+.todo-app h2 {
+    display: flex;
+    align-items: center;
+    color: #002765;
+    margin-bottom: 25px;
+    margin-left: 10px;
+}
+
+.todo-app h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+/* =========================
+   INPUT ROW
+========================= */
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border-radius: 30px;
+    background-color: rgb(202, 224, 244);
+}
+
+.row input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    border-radius: 30px;
+    font-size: 14px;
+}
+
+.row button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+/* =========================
+   TASK LIST
+========================= */
+ul li {
+    list-style: none;
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+    padding: 10px 12px 20px 50px;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 8px;
+    height: 28px;
+    width: 28px;
+    border-radius: 50px;
+    background-image: url("unchecked.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Checked Item Style */
+.checkitem .task-text {
+    color: #555;
+    text-decoration: line-through;
+}
+
+/* =========================
+   TASK ACTION BUTTONS (Edit / Delete)
+========================= */
+.task-actions {
+    position: absolute;
+    top: 5px;
+    right: 50px;
+    display: flex;
+    gap: 8px;
+}
+
+.task-actions button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 18px;
+    transition: transform 0.2s;
+}
+
+.task-actions button:hover {
+    transform: scale(1.2);
+}
+
+/* =========================
+   DELETE ICON (Old span style)
+========================= */
+ul li span { 
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    transition: background 0.2s;
+}
+
+ul li span:hover {
+    background: #edeef0;
+}
+.action-buttons{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    background-color: #fff;
+    border-radius:6px ;
+}
+.action-buttons button{
+    
+    padding: 14px 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
